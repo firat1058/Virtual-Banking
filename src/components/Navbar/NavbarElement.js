@@ -3,8 +3,9 @@ import { Link as LinkRtr } from 'react-router-dom';
 import { Link as LinkS} from 'react-scroll';
 
 export const Nav = styled.nav`
-background: #000;
+background: ${({scrollNav}) => (scrollNav ? '#000' : '#transparent')}
 height: 80;
+margin-top: -80;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -28,7 +29,7 @@ max-width: 1100px;
 
 `;
 export const NavLogo = styled(LinkRtr)`
-color: #fff;
+color: #000;
 justify-self: flex-start;
 cursor: pointer;
 font-size: 2.5rem;
@@ -50,7 +51,7 @@ display: none;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
-    color: #fff;
+    color: #000;
 
 }
 `
@@ -72,7 +73,7 @@ height: 80px;
 `
 
 export const NavLinks = styled(LinkS)`
-color: #fff;
+color: #000;
 display: flex;
 align-items: center;
 text-decoration: none;
